@@ -14,8 +14,7 @@ __init__ - конструктор, который инициализирует �
 В поле для ответа загрузи ссылку на GitHub-репозиторий, содержащий код проекта с реализацией задания.
 """
 
-
-class Store:
+cclass Store:
     def __init__(self, name, address):
         self.name = name
         self.address = address
@@ -34,3 +33,17 @@ class Store:
     def update_price(self, item_name, new_price):
         if item_name in self.items:
             self.items[item_name] = new_price
+
+# Создание магазинов
+store1 = Store("Best Electronics", "123 Tech Road")
+store2 = Store("Daily Groceries", "456 Daily Ave")
+store3 = Store("Fashion Hub", "789 Trendy St")
+
+# Добавление товаров в магазины
+store1.add_item("TV", 299.99)
+store1.add_item("Laptop", 599.99)
+store2.add_item("Apples", 0.99)
+store2.add_item("Milk", 2.49)
+store3.add_item("Jeans", 39.99)
+store3.add_item("T-Shirt", 19.99)
+
