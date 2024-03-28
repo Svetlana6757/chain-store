@@ -13,3 +13,24 @@ __init__ - конструктор, который инициализирует �
 Выбери один из созданных магазинов и протестируй все его методы: добавь товар, обнови цену, убери товар и запрашивай цену.
 В поле для ответа загрузи ссылку на GitHub-репозиторий, содержащий код проекта с реализацией задания.
 """
+
+
+class Store:
+    def __init__(self, name, address):
+        self.name = name
+        self.address = address
+        self.items = {}  # Пустой словарь для товаров
+
+    def add_item(self, item_name, price):
+        self.items[item_name] = price
+
+    def remove_item(self, item_name):
+        if item_name in self.items:
+            del self.items[item_name]
+
+    def get_price(self, item_name):
+        return self.items.get(item_name, None)
+
+    def update_price(self, item_name, new_price):
+        if item_name in self.items:
+            self.items[item_name] = new_price
