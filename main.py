@@ -47,3 +47,13 @@ store2.add_item("Milk", 2.49)
 store3.add_item("Jeans", 39.99)
 store3.add_item("T-Shirt", 19.99)
 
+# Тестирование на примере store1
+print("Цена TV до обновления:", store1.get_price("TV"))
+store1.update_price("TV", 279.99)
+print("Цена TV после обновления:", store1.get_price("TV"))
+
+store1.add_item("Headphones", 49.99)
+print("Цена Headphones:", store1.get_price("Headphones"))
+
+store1.remove_item("Laptop")
+print("Цена Laptop после удаления:", store1.get_price("Laptop"))
