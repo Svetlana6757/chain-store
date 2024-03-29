@@ -56,4 +56,4 @@ store1.add_item("Смартфон", 15400)
 print("Цена Headphones:", store1.get_price("Смартфон"))
 
 store1.remove_item("Ноутбук")
-print("Цена Laptop после удаления:", store1.get_price("Ноутбук"))
+print("Цена Ноутбука после удаления:", store1.get_price("Ноутбук"))
