@@ -35,25 +35,25 @@ class Store:
             self.items[item_name] = new_price
 
 # Создание магазинов
-store1 = Store("Best Electronics", "123 Tech Road")
-store2 = Store("Daily Groceries", "456 Daily Ave")
-store3 = Store("Fashion Hub", "789 Trendy St")
+store1 = Store("М-Видео", "Цветной бульвар, 25")
+store2 = Store("Глобус", "Болотная, 13")
+store3 = Store("Бершка", "Зеленая, 17")
 
 # Добавление товаров в магазины
-store1.add_item("TV", 299.99)
-store1.add_item("Laptop", 599.99)
-store2.add_item("Apples", 0.99)
-store2.add_item("Milk", 2.49)
-store3.add_item("Jeans", 39.99)
-store3.add_item("T-Shirt", 19.99)
+store1.add_item("ТВ", 27000)
+store1.add_item("Ноутбук", 51000)
+store2.add_item("Яблоки", 160)
+store2.add_item("Молоко", 92)
+store3.add_item("Джинсы", 3500)
+store3.add_item("Рубашка", 2100)
 
 # Тестирование на примере store1
-print("Цена TV до обновления:", store1.get_price("TV"))
-store1.update_price("TV", 279.99)
-print("Цена TV после обновления:", store1.get_price("TV"))
+print("Цена ТВ до обновления:", store1.get_price("ТВ"))
+store1.update_price("ТВ", 32000)
+print("Цена TV после обновления:", store1.get_price("ТВ"))
 
-store1.add_item("Headphones", 49.99)
-print("Цена Headphones:", store1.get_price("Headphones"))
+store1.add_item("Смартфон", 15400)
+print("Цена Headphones:", store1.get_price("Смартфон"))
 
-store1.remove_item("Laptop")
-print("Цена Laptop после удаления:", store1.get_price("Laptop"))
+store1.remove_item("Ноутбук")
+print("Цена Laptop после удаления:", store1.get_price("Ноутбук"))
