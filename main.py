@@ -22,10 +22,13 @@ class Store:
 
     def add_item(self, item_name, price):
         self.items[item_name] = price
+        print(f"Товар {item_name} добавлен в список товаров {self.name}")
+
 
     def remove_item(self, item_name):
         if item_name in self.items:
             del self.items[item_name]
+            print(f"Товар {item_name} удален из списка товаров {self.name}")
 
     def get_price(self, item_name):
         return self.items.get(item_name, None)
@@ -33,6 +36,8 @@ class Store:
     def update_price(self, item_name, new_price):
         if item_name in self.items:
             self.items[item_name] = new_price
+            print(f"Цена на товар {item_name} изменена успешно в {self.name}")
+
 
 # Создание магазинов
 store1 = Store("М-Видео", "Цветной бульвар, 25")
@@ -53,7 +58,7 @@ store1.update_price("ТВ", 32000)
 print("Цена TV после обновления:", store1.get_price("ТВ"))
 
 store1.add_item("Смартфон", 15400)
-print("Цена Headphones:", store1.get_price("Смартфон"))
+print("Цена Смартфон:", store1.get_price("Смартфон"))
 
 store1.remove_item("Ноутбук")
 print("Цена Ноутбука после удаления:", store1.get_price("Ноутбук"))
