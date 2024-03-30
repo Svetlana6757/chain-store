@@ -53,9 +53,9 @@ store3.add_item("Джинсы", 3500)
 store3.add_item("Рубашка", 2100)
 
 # Тестирование на примере store1
-print("Цена ТВ до обновления:", store1.get_price("ТВ"))
+print("Цена ТВ в {self.name} до обновления:", store1.get_price("ТВ"))
 store1.update_price("ТВ", 32000)
-print("Цена TV после обновления:", store1.get_price("ТВ"))
+print("Цена TV в {self.name} после обновления:", store1.get_price("ТВ"))
 
 store1.add_item("Смартфон", 15400)
 print("Цена Смартфон:", store1.get_price("Смартфон"))
